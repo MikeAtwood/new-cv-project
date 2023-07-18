@@ -5,9 +5,68 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #252525;
+  color: azure;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  display: flex
+}
+
+.column {
+  flex: 1
+}
+
+.title {
+  font-style: italic;
+}
+
+.input-field {
+  border: 1px solid #1b1a1a;
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  background-color: #1b1a1a;
+}
+
+.input-info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+
+.input-info h3 {
+  text-align: left;
+  font-style: italic;
+}
+
+input {
+  background-color: #1b1a1a;
+  color: azure;
+  margin: 5px;
+}
+
+.newform-general {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: .4px;
+}
+
+.extra-info {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.more-info {
+  font-size: 20px;
 }
