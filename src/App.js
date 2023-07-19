@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import './App.css';
-import { u4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 const App = () => {
   const [newFormData, setNewFormData] = useState({
@@ -27,11 +27,22 @@ const App = () => {
     ]
   })
 
+    const handleInputChange = (event) => {
+    const {name, value} = event.target
+    setNewFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
+  
   
 
   return (
     <div className="App">
-      <Form />
+      <Form 
+        handleInputChange={handleInputChange}
+      />
     </div>
   );
 }
