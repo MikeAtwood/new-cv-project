@@ -27,22 +27,25 @@ const App = () => {
     ]
   })
 
-    const handleInputChange = (event) => {
-    const {name, value} = event.target
+  const handleInputChange = (event) => {
+    const { name, value } = event.target
     setNewFormData(prevState => ({
       ...prevState,
       [name]: value
     }))
   }
 
-  
-  
+
+
 
   return (
     <div className="App">
-      <Form 
-        handleInputChange={handleInputChange}
-      />
+      <div className='colomn'>
+        <Form
+          newFormData={newFormData}
+          handleInputChange={handleInputChange}
+        />
+      </div>
     </div>
   );
 }

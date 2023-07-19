@@ -1,11 +1,13 @@
 import React from "react";
 import General from "./General";
 
-const Form = () => {
+const Form = ({ handleInputChange }) => {
     return (
         <div>
             <div className="input-field">
-                <General />
+                <General 
+                    handleInputChange={handleInputChange}
+                />
             </div>
         </div>
     )
