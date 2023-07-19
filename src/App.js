@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Form from './components/Form';
 import './App.css';
 import { u4 as uuidv4 } from 'uuid'
 
@@ -30,7 +31,7 @@ const App = () => {
 
   return (
     <div className="App">
-      
+      <Form />
     </div>
   );
 }
