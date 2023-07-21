@@ -3,7 +3,7 @@ import General from "./General";
 import Education from "./Education";
 import Experience from "./Experience";
 
-const Form = ({ handleInputChange }) => {
+const Form = ({ experiences, handleInputChange, handleExperienceChange, handleAddExperience }) => {
     return (
         <div>
             <div className="input-field">
@@ -13,7 +13,14 @@ const Form = ({ handleInputChange }) => {
                 <Education 
                     handleInputChange={handleInputChange}
                 />
-                <Experience />
+                {experiences.map((experience) => (
+                    <Experience
+                        key={experience.id}
+                        experience={experience}
+                        handleExperienceChange={(event) => handleExperienceChange(event, experience.id)}
+                    />
+                ))}
+                <button onClick={() => handleAddExperience()}>Add+</button>
             </div>
         </div>
     )
