@@ -3,6 +3,7 @@ import React from "react";
 const Education = ({ handleInputChange, schoolName, titleOfStudy, studyStartDate, studyEndDate }) => {
     return (
         <div className="input-info">
+            <h3>Education</h3>
             <input
                 placeholder="School"
                 style={{ border: 'none' }}

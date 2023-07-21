@@ -3,6 +3,7 @@ import React from "react";
 const General = ({ handleInputChange, firstName, lastName, email, phoneNumber }) => {
     return (
         <div className="input-info">
+            <h3>General</h3>
             <input
                 placeholder="First Name"
                 style={{ border: 'none' }}

@@ -35,6 +35,25 @@ const App = () => {
     }))
   }
 
+  const handleExperienceChange = (event, index) => {
+    const { name, value } = event.target
+    setNewFormData(prevState => {
+      const updatedExperiences = prevState.experiences.map(experience => {
+        if (experience.id === index) {
+          return {
+            ...experience,
+            [name]: value
+          }
+        }
+        return experience
+      })
+      return {
+        ...prevState,
+        experiences: updatedExperiences
+      }
+    })
+  }
+
 
 
 
@@ -44,6 +63,7 @@ const App = () => {
         <Form
           newFormData={newFormData}
           handleInputChange={handleInputChange}
+          handleExperienceChange={handleExperienceChange}
         />
       </div>
     </div>
