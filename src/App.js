@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from './components/Form';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid'
+import NewForm from './components/NewForm';
 // import Experience from './components/Experience';
 
 const App = () => {
@@ -89,6 +90,7 @@ const App = () => {
   return (
     <div className="App">
       <div className='column'>
+        <h1>form</h1>
         <Form
           newFormData={newFormData}
           handleInputChange={handleInputChange}
@@ -98,7 +100,20 @@ const App = () => {
         />
       </div>
       <div className='column'>
-    
+        <h1>new form</h1>
+        <NewForm
+        firstName={newFormData.firstName}
+        lastName={newFormData.lastName}
+        email={newFormData.email}
+        phoneNumber={newFormData.phoneNumber}
+        schoolName={newFormData.schoolName}
+        titleOfStudy={newFormData.titleOfStudy}
+        studyStartDate={newFormData.studyStartDate}
+        studyEndDate={newFormData.studyEndDate}
+        newFormData={newFormData}
+        experiences={newFormData.experiences}
+        handleInputChange={handleInputChange}
+        />
       </div>
     </div>
   );

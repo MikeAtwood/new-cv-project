@@ -1,9 +1,19 @@
 import React from "react";
 
-const NewForm = () => {
+const NewForm = ({ firstName, }) => {
     return (
-        <div>
-            
+        <div className="input-field">
+            <div className="input-info">
+                <input
+                    className="newform-general"
+                    type="text"
+                    style={{ border: 'none' }}
+                    name="firstName"
+                    value={firstName}
+                    readOnly
+                />
+
+            </div>
         </div>
     )
 }   
