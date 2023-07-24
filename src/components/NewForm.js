@@ -1,6 +1,16 @@
 import React from "react";
 
-const NewForm = ({ firstName, }) => {
+const NewForm = ({ 
+    firstName, 
+    lastName,
+    email,
+    phoneNumber,
+    schoolName,
+    titleOfStudy,
+    studyStartDate,
+    studyEndDate,
+    experiences
+}) => {
     return (
         <div className="input-field">
             <div className="input-info">
@@ -12,8 +22,106 @@ const NewForm = ({ firstName, }) => {
                     value={firstName}
                     readOnly
                 />
-
+                <input
+                        className="newform-general"
+                        type="text"
+                        style={{ border: "none" }}
+                        name="lastName"
+                        value={lastName}
+                        readOnly
+                    />
+                    <input
+                        type="email"
+                        style={{ border: "none" }}
+                        name="email"
+                        value={email}
+                        readOnly
+                    />
+                    <input
+                        type="tel"
+                        style={{ border: "none" }}
+                        name="phoneNumber"
+                        value={phoneNumber}
+                        readOnly
+                    />
+                </div>
+                <div className="input-info">
+                    <input
+                        className="extra-info"
+                        type="text"
+                        style={{ border: 'none' }}
+                        name="schoolName"
+                        value={schoolName}
+                        readOnly
+                    />
+                    <input
+                        className="more-info"
+                        type="text"
+                        style={{ border: 'none' }}
+                        name="titleOfStudy"
+                        value={titleOfStudy}
+                        readOnly
+                    />
+                    <input
+                        className="more-info"
+                        type="text"
+                        style={{ border: 'none' }}
+                        name="studyStartDate"
+                        value={studyStartDate}
+                        readOnly
+                    />
+                    <input
+                        className="more-info"
+                        type="text"
+                        style={{ border: 'none' }}
+                        name="studyEndDate"
+                        value={studyEndDate}
+                        readOnly />
             </div>
+            {experiences.map((experience, index) => (
+                    <div className="input-info" key={index}>
+                        <input
+                            className="extra-info"
+                            type="text"
+                            style={{ border: 'none' }}
+                            name={`experiences[${index}].companyName`}
+                            value={experience.companyName}
+                            readOnly
+                        />
+                        <input
+                            className="more-info"
+                            type="text"
+                            style={{ border: 'none' }}
+                            name={`experiences[${index}].position`}
+                            value={experience.position}
+                            readOnly
+                        />
+                        <input
+                            className="more-info"
+                            type="text"
+                            style={{ border: 'none' }}
+                            name={`experiences[${index}].mainTasks`}
+                            value={experience.mainTasks}
+                            readOnly
+                        />
+                        <input
+                            className="more-info"
+                            type="text"
+                            style={{ border: 'none' }}
+                            name={`experiences[${index}].jobStartDate`}
+                            value={experience.jobStartDate}
+                            readOnly
+                        />
+                        <input
+                            className="more-info"
+                            type="text"
+                            style={{ border: 'none' }}
+                            name={`experiences[${index}].jobEndDate`}
+                            value={experience.jobEndDate}
+                            readOnly
+                        />
+                    </div>
+            ))}
         </div>
     )
 }   
