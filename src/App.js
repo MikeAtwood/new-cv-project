@@ -88,7 +88,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className='colomn'>
+      <div className='column'>
         <Form
           newFormData={newFormData}
           handleInputChange={handleInputChange}
@@ -96,6 +96,9 @@ const App = () => {
           handleAddExperience={handleAddExperience}
           experiences={newFormData.experiences}
         />
+      </div>
+      <div className='column'>
+    
       </div>
     </div>
   );
